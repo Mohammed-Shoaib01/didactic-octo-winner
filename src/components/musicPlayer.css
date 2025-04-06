@@ -1,89 +1,123 @@
-
 .music-player {
-    max-width: 500px;
-    margin: 2rem auto;
-    padding: 1rem;
-    border: 1px solid black;
-    border-radius: 8px;
-    text-align: center;
-    font-family: sans-serif;
-  }
-  
-  .playlist-select {
-    margin-bottom: 1rem;
-    border: 1px solid black;
-  }
-  
-  .playlist-header {
-    margin-bottom: 1rem;
-  }
-  
-  .track-cards-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-    padding: 0.5rem 0;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-  }
-  
-  .track-card {
-    flex: 0 0 150px;
-    aspect-ratio: 1 / 1;
-    background-color: gainsboro;
-    border: 1px solid black;
-    border-radius: 4px;
-    padding: 0.5rem;
-    cursor: pointer;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
-    scroll-snap-align: center;
-    box-sizing: border-box;
-  }  
-  
-  .track-card.active {
-    border-color: black;
-    background-color: #1ED760;
-    transform: scale(1.1);
-  }
-  
-  .progress-slider-container {
-    margin: 1rem 0;
-  }
-  
-  .time-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .time-current,
-  .time-duration {
-    font-size: 0.9rem;
-    width: 50px;
-  }
-  
-  .time-current {
-    text-align: left;
-  }
-  
-  .time-duration {
-    text-align: right;
-  }
-  
-  .MuiSlider-root {
-    flex: 1;
-    margin: 0 8px;
-  }
-  
-  .controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }  
-  
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(145deg, #1f1c2c, #928dab);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.playlist-select {
+  margin-bottom: 1rem;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: #ffffff10;
+  color: #fff;
+  backdrop-filter: blur(6px);
+  font-weight: bold;
+}
+
+.playlist-header {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.track-cards-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.track-card {
+  flex: 0 0 150px;
+  aspect-ratio: 1 / 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.track-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff40;
+}
+
+.track-card.active {
+  border-color: #1ED760;
+  background: #1ED760;
+  color: #000;
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+.progress-slider-container {
+  margin: 1.5rem 0;
+}
+
+.time-container {
+  display: flex;
+  align-items: center;
+  color: #ccc;
+}
+
+.time-current,
+.time-duration {
+  font-size: 0.85rem;
+  width: 50px;
+}
+
+.time-current {
+  text-align: left;
+}
+
+.time-duration {
+  text-align: right;
+}
+
+.MuiSlider-root {
+  flex: 1;
+  margin: 0 8px;
+  color: #1ED760;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.controls button {
+  background: #1ED760;
+  border: none;
+  border-radius: 50%;
+  padding: 0.75rem;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.controls button:hover {
+  background: #1db954;
+  transform: scale(1.1);
+}
