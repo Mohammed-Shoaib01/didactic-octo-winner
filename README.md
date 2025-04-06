@@ -1,5 +1,5 @@
 # Implementation Screenshot
-![alt text](<Screenshot 2025-02-28 at 11.36.24 AM.png>)
+![A picture of the audio player running](<VideoPlayer.PNG>)
 
 # Linear Media Player
 
