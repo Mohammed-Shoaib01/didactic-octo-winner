@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "run":"npm install && npm run dev"
+    "run":"npm install && nvm install 20 && nvm use 20 && npm run dev"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
