@@ -1,6 +1,11 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm run build"
   publish = "dist"
+
+[dev]
+  command = "npm run dev"
+  targetPort = 5173 # Or whatever port Vite uses locally
+  framework = "vite"
 
 [build.environment]
   NODE_VERSION = "20"
